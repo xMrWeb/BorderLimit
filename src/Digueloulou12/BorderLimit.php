@@ -15,12 +15,12 @@ class BorderLimit extends PluginBase implements Listener
     public function onEnable(): void
     {
         $this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML, [
-            "min_x" => -500,
-            "max_x" => 500,
-            "min_z" => -500,
-            "max_z" => 500,
+            "min_x" => -15000,
+            "max_x" => 15000,
+            "min_z" => -15000,
+            "max_z" => 15000,
             "msg" => true,
-            "msg_" => "You have reached the limit!"
+            "msg_" => "Vous avez atteint la limite de la map !"
         ]);
 
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
